@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59c8df99-948e-41d4-bccb-0c3026cb4da3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="wherePara" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `bbddJava`.`Cliente`.id,
+	`bbddJava`.`Cliente`.nombre,
+	`bbddJava`.`Cliente`.apellidos,
+	`bbddJava`.`Cliente`.dni,
+	`bbddJava`.`Cliente`.fecha_nacimiento,
+	`bbddJava`.`Cliente`.foto
+FROM `bbddJava`.`Cliente` $P!{wherePara}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cliente"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cliente"/>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="apellidos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cliente"/>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="dni"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cliente"/>
+	</field>
+	<field name="fecha_nacimiento" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fecha_nacimiento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cliente"/>
+	</field>
+	<field name="foto" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="foto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cliente"/>
+	</field>
+	<background>
+		<band height="800" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement stretchType="ContainerHeight" x="0" y="220" width="550" height="280" uuid="ca01c2ff-a87e-4038-a8e6-6cc1b97e9180"/>
+				<imageExpression><![CDATA["images/marca_de_agua.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="14" width="240" height="45" uuid="b6e4173a-9c03-4949-8bf0-d2394748ea7c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IES La Vereda]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="11" width="50" height="50" uuid="cfdcacf0-142e-4d89-a8ab-54611a026ae4"/>
+				<imageExpression><![CDATA["images/logo_compacto.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="11" width="544" height="30" uuid="3edf2c76-9018-4cb2-99df-6324bff4cc71"/>
+				<text><![CDATA[Listado de clientes ordenados por fecha de nacimiento]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="16" width="561" height="20" uuid="8dcb1beb-2d23-40f2-8f12-0614237b32ad"/>
+				<staticText>
+					<reportElement x="0" y="0" width="30" height="20" uuid="c37d6651-e45c-49a4-b80a-4cf952a96c5d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[id]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="0" width="80" height="20" uuid="f30d3f2d-b52c-4a1b-ad59-b11ed32ab13d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[DNI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="110" y="0" width="120" height="20" uuid="37d5e44d-0c50-4c74-a866-c73d38b3ec80"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="400" y="0" width="80" height="20" uuid="09fc5c67-bac4-490d-b578-a880c1c2db7d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Fecha nacimiento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="230" y="0" width="170" height="20" uuid="cb3ec286-5d75-4b78-8c20-4a1ffeb1edea"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Apellidos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="480" y="0" width="80" height="20" uuid="44fe095a-0ce0-483e-8f01-29dfb7882dbf"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Foto]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement x="-10" y="40" width="580" height="1" uuid="3596bd94-4481-4204-90b6-ec7aad46b1ee"/>
+				<graphicElement>
+					<pen lineWidth="6.0" lineColor="#2C7A2C"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="48" uuid="f17264e0-119d-4904-a113-c6e04e09689c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="80" height="48" uuid="8446d05b-f31c-4356-8b64-05a03a23871f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="120" height="48" uuid="04eb9968-5f65-4d87-93da-f3d4ee5c1580"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="169" height="48" uuid="474de203-d162-4692-9421-546b5a058303"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="80" height="49" uuid="4f5e9053-59f6-4740-9e13-1585907d55fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{fecha_nacimiento});]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="485" y="0" width="50" height="49" uuid="6e806253-8ee6-401c-a429-aa37d6a9ab6a"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="0" width="100" height="20" uuid="f55ef8e6-6b25-4724-9e13-13df0821db7f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="130" height="20" uuid="e989835f-4cad-4aed-a770-e1c2c19c44ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Documento generado el ]]></text>
+			</staticText>
+			<textField pattern="dd - MMMMM - yyyy">
+				<reportElement x="130" y="0" width="100" height="20" uuid="a7e7430d-2e0d-4303-a5aa-16356eb72bda"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>
